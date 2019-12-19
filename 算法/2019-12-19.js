@@ -22,12 +22,13 @@
                 sum = item + array[i] + array[j];
                  
                //因为数组已经排序好了
-               //如果新值大于旧值，把j向前移位
-               //反之把i向后移位
+               //如果新值大于旧值，把j向前移位     
                 if (Math.abs(sum - target) > cha) {
-
                     j--;
                 } else {
+                    //反之把i向后移位
+                    //重新计算差
+                    //给结果赋值
                     cha = Math.abs(sum - target);
                     result = sum;
                     i++;
