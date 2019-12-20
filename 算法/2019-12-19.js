@@ -52,21 +52,17 @@
     //找出所有满足条件且不重复的四元组。
 
     // 注意：
-
     // 答案中不可以包含重复的四元组。
-
     // 示例：
-
     // 给定数组 nums = [1, 0, -1, 0, -2, 2]，和 target = 0。
-
     // 满足要求的四元组集合为：
     // [
     //   [-1,  0, 0, 1],
     //   [-2, -1, 1, 2],
     //   [-2,  0, 0, 2]
     // ]
-
     //4数之和
+    // 双指针法
     var fourSum = function (arr, target) {
         arr.sort((a, b) => {
             return a - b;
@@ -79,19 +75,18 @@
                 while (start < end) {
 
                     var sum = arr[i] + arr[j] + arr[start] + arr[end];
-                  
                     if (sum == target) {
                         let ans = [arr[i], arr[j], arr[start], arr[end]];
                         result.push(ans);
-                        end--;
-                       
+                        end--; 
                     }
                     if (sum > target) {
-                        end--;
+                        end--; 
                       
                     }
                     if(sum<target){
                         start++;
+                     
                     }
 
                 }
@@ -102,5 +97,5 @@
 
     }
 
-    fourSum([1, 0, -1, 0, -2, 2], 0)
+    fourSum([1, 0, -1, 0, -2, 2], -1)
 }
