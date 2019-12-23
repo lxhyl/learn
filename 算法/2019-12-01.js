@@ -139,6 +139,7 @@ console.timeEnd();
 
 //动态规划
 console.time()
+
 function fbnq(n) {
    var result = [1,1];
    if(n<3){
