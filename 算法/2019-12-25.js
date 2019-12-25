@@ -150,3 +150,32 @@ console.log(minPathSum(
         [4,2,1] 
     ]
 ))
+
+
+//动态规划
+var minPathSum = function(result){
+ 
+  for(let i =0;i<result.length;i++){
+      for(let j =0;j<result[0].length;j++){
+        if(i==0 && j ==0) continue;
+        else if(i==0){
+            result[i][j] += result[i][j-1];
+        }else if(j==0){
+            result[i][j] += result[i-1][j];
+        }else {
+            let topSum = result[i][j] + result[i-1][j];
+            let leftSum = result[i][j] + result[i][j-1];
+            result[i][j] = Math.min(topSum,leftSum);
+        }
+
+      }
+  }
+  return result[result.length-1][result[0].length-1];
+}
+console.log(minPathSum(
+    [
+        [1,3,1],
+        [1,5,1],
+        [4,2,1], 
+    ]
+))
