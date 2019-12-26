@@ -96,6 +96,7 @@ console.log(atoi("  - 4 42 1111with words"));
 // 解释: 因为路径 1→3→1→1→1 的总和最小。
 
 //贪心算法
+
 var minPathSum = function (arr) {
     var sum = 0;
     var result = [];
@@ -154,7 +155,6 @@ console.log(minPathSum(
 
 //动态规划
 var minPathSum = function(result){
- 
   for(let i =0;i<result.length;i++){
       for(let j =0;j<result[0].length;j++){
         if(i==0 && j ==0) continue;
@@ -167,7 +167,6 @@ var minPathSum = function(result){
             let leftSum = result[i][j] + result[i][j-1];
             result[i][j] = Math.min(topSum,leftSum);
         }
-
       }
   }
   return result[result.length-1][result[0].length-1];
