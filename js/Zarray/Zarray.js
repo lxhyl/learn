@@ -63,9 +63,10 @@ Zarray.prototype.maxItem = function(arr){
   }
 }
 
-
-
-
+//数组扁平化
+Zarray.prototype.bph = function(arr){
+  return arr.toString().split(',')
+}
 
 
 
