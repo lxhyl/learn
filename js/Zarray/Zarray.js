@@ -1,8 +1,5 @@
 
-// export default  
-function Zarray() {
-
-}
+export default  function Zarray() {}
 
 Zarray.prototype = {
   constructor: Zarray,
