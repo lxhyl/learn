@@ -1,6 +1,5 @@
 
-// export default  
-function Zarray(){}
+export default  function Zarray(){}
 
 //去重
 Zarray.prototype.qc = function(arr){
@@ -56,7 +55,7 @@ Zarray.prototype.maxItem = function(arr){
       items.push(arr[i]);
     }
   }
-  items = Array.from(new Set([...items]))
+  items = this.qc(items)
   return {
     'items':items,
     'num':num,
@@ -71,5 +70,5 @@ Zarray.prototype.bph = function(arr){
 
 //连接数组并去重
 Zarray.prototype.ljqc = function(){
-   return this.bph(Array.from(new Set([...arguments])))
+   return this.qc(this.bph([...arguments]))
 }
