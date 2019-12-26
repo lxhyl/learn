@@ -40,7 +40,7 @@ Zarray.prototype.jbc = function(arr1,arr2,type){
  * @param {arr} 
  * @returns {items[item],num}
  */
-Zarray.prototype.maxItem = function(arr){
+Zarray.prototype.mostItem = function(arr){
   arr.sort();
   var num = 0;
   var items = [];

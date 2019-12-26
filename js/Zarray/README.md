@@ -23,7 +23,7 @@ return Array
 ```
 出现最多的元素
 ```
-arr.maxItem(Array)
+arr.mostItem(Array)
 return {items,num}
 ```
 最大值
