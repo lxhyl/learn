@@ -15,6 +15,9 @@ return Array
 ```
 交并差集
 ```
+type = 'j' //交集
+type = 'b' //并集
+type = 'c' //差集 
 arr.jbc(arr1,arr2,type)
 return Array
 ```
