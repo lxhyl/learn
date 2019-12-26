@@ -1,11 +1,11 @@
-### 学习js   
+### 学习js  
+学习中。。。 
 **安装**   
 `npm install zarray`   
-**使用**
-    
+**使用**  
 ``` 
 import Zarray from 'zarray'   
-const arr = new Zarray();
+var arr = new Zarray();
 ```  
 去重
 ```
@@ -32,4 +32,8 @@ return {items,num}
 arr.min(Array)
 return number
 ```
-
+数组扁平化
+```
+arr.bph(Array)
+return Array
+```
