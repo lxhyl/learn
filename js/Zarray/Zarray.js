@@ -1,5 +1,6 @@
 
-export default  function Zarray(){}
+// export default  
+function Zarray(){}
 
 //去重
 Zarray.prototype.qc = function(arr){
@@ -68,5 +69,7 @@ Zarray.prototype.bph = function(arr){
   return arr.toString().split(',')
 }
 
-
-
+//连接数组并去重
+Zarray.prototype.ljqc = function(){
+   return this.bph(Array.from(new Set([...arguments])))
+}

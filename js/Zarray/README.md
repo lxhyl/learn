@@ -38,3 +38,8 @@ return number
 arr.bph(Array)
 return Array
 ```
+连接数组并去重
+```
+arr.ljqc(arr1,arr2,arr3...)
+return Array
+```

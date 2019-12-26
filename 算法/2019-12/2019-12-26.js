@@ -19,7 +19,6 @@ var jump = function(arr){
     for(let i =0;i<arr.length-1;i++){
         //每次循环更新跳到的最大位置
        pos = Math.max(pos,arr[i] + i);
-
        if(i == end){      //当跳到上一次计算出的最大位置时
            end = pos;    //更新最大位置
            num++;        //步数加一
