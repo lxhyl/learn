@@ -1,13 +1,19 @@
 
-export default  function Zarray() {}
+// export default  
+function Zarray() {}
 
 Zarray.prototype = {
   constructor: Zarray,
   //去重
   qc(arr) {
     return Array.from(new Set(arr));
+  
   },
-
+  //根据数组对象值去重
+  qcByValue(arr,key){
+    var bra = new Map();
+    return arr.filter( item =>  !bra.has(item[key]) && bra.set(item[key],'whatever you want'))
+  }, 
   //最大值
   max(arr) {
     return Math.max(...arr.filter(item => !isNaN(item)))
@@ -80,3 +86,4 @@ Zarray.prototype = {
   },
 
 }
+
