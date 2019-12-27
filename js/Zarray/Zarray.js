@@ -32,6 +32,7 @@ Zarray.prototype = {
           return last;
     },[])
   },
+ 
   //最大值
   max(arr) {
     return Math.max(...arr.filter(item => !isNaN(item)))
@@ -91,7 +92,12 @@ Zarray.prototype = {
   },
   //数组扁平化
   bph(arr) {
+    //方法一
     return arr.toString().split(',')
+  //reduce方法
+  //  arr.reduce( (last,now) => {
+  //    last.concat(now)
+  //  },[])
   },
   //连接数组并去重
   ljqc() {
@@ -104,13 +110,3 @@ Zarray.prototype = {
   },
 
 }
-var myArr = new Zarray();
-let person = [
-  {id: 0, name: "小明"},
-  {id: 1, name: "小张"},
-  {id: 2, name: "小李"},
-  {id: 3, name: "小孙"},
-  {id: 1, name: "小周"},
-  {id: 2, name: "小陈"},   
-];
-console.log(myArr.qcByValue(person,'id'))
