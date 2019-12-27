@@ -13,7 +13,25 @@ Zarray.prototype = {
   qcByValue(arr,key){
     var bra = new Map();
     return arr.filter( item =>  !bra.has(item[key]) && bra.set(item[key],'whatever you want'))
+        //将item[key]值设为键加入到bra中,
+        // 下次循环，查询是否有这个键，如果有就取反，结果为false；
+        // 进入下一次循环
+
+    
   }, 
+  // 根据数组对象键去重
+  qcByKey(arr,key){
+    var obj = {}
+    return arr.reduce((last,now) => {
+          if(obj[key]){
+
+          }else {
+             obj[key] = true;
+             last.push(now);
+          }
+          return last;
+    },[])
+  },
   //最大值
   max(arr) {
     return Math.max(...arr.filter(item => !isNaN(item)))
@@ -86,4 +104,13 @@ Zarray.prototype = {
   },
 
 }
-
+var myArr = new Zarray();
+let person = [
+  {id: 0, name: "小明"},
+  {id: 1, name: "小张"},
+  {id: 2, name: "小李"},
+  {id: 3, name: "小孙"},
+  {id: 1, name: "小周"},
+  {id: 2, name: "小陈"},   
+];
+console.log(myArr.qcByValue(person,'id'))
