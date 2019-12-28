@@ -15,6 +15,7 @@ arr.qc(Array)
 return Array
 ```
 数组对象去除
+```
 arr.qcByValue(arr,key)  or arr.qcByKey(arr,key);
 return Array
 交并差集
