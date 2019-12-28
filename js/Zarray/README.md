@@ -8,11 +8,15 @@
 import Zarray from 'zarray'   
 var arr = new Zarray();
 ```  
-去重
+**去重**
+set方法
 ```
 arr.qc(Array)
 return Array
 ```
+数组对象去除
+arr.qcByValue(arr,key)  or arr.qcByKey(arr,key);
+return Array
 交并差集
 ```
 type = 'j' //交集
@@ -44,5 +48,10 @@ return Array
 连接数组并去重
 ```
 arr.ljqc(arr1,arr2,arr3...)
+return Array
+```
+数组乱序
+```
+arr.lx(arr)
 return Array
 ```
