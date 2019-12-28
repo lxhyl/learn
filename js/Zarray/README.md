@@ -18,6 +18,7 @@ return Array
 ```
 arr.qcByValue(arr,key)  or arr.qcByKey(arr,key);
 return Array
+```
 交并差集
 ```
 type = 'j' //交集
