@@ -1,0 +1,1 @@
+Array.from(document.getElementsByClassName('reader-txt-layer'))[0].innerText;
