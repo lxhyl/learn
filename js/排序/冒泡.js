@@ -13,4 +13,5 @@ var px = function(arr){
   return arr;
 }
 
-console.log(px([2,3,1,1,4,5,6,7]))
+console.log(px([2,3,1,1,4,5,6,7]));
+
