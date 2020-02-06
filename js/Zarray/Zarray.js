@@ -107,7 +107,9 @@ Zarray.prototype = {
   qh(arr) {
     return arr.filter(item => !isNaN(item)).reduce((a, b) => a + b)
   },
-  //数组乱序
+
+  // 洗牌算法
+  
   lx(arr) {
     for(let i = 0 ;i<arr.length;i++){
       var cIndex = parseInt(Math.random()*arr.length)
