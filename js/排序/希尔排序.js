@@ -13,7 +13,7 @@ function xe(e){
           e[index + gap] = item;
       }
       gap = parseInt(gap/2)
-      console.log(gap)
+      
   }
   return e;
 }
