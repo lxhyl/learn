@@ -4,35 +4,37 @@
 
 // 请你统计并返回能够与至少一台其他服务器进行通信的服务器的数量
 var arr = [
-    [1,1,0,0],
-    [0,0,1,0],
-    [0,0,1,0],
-    [0,0,0,1]
+    [1, 0],
+    [0, 1]
 ]
 
 
-var countServer = function(grid){
+
+var countServer = function (grid) {
     var k = grid.length;
     var g = grid[0].length;
     var count = 0;
-    for(let i = 0;i<k;i++){
-        for(let j = 0;j<g;j++){
-            if(grid[i][j] == 1){
-                 for(let heng =0;heng<g;heng++){
-                     if(grid[i][heng] == 1 && heng != j){
-                         count++;
-                     }
-                 }
-                
-                 for(let shu = 0;shu<k;shu++){
-                     if(grid[j][shu] == 1 && shu != j){
-                         count++;
-                     }
-                 }
-                
+    for (let i = 0; i < k; i++) {
+        for (let j = 0; j < g; j++) {
+            var num = 0;
+            if (grid[i][j] == 1) {
+                for (let heng = 0; heng < g; heng++) {
+                    if (grid[i][heng] == 1 && heng != j) {
+                        num++;
+                    }
+                }
+                for (let shu = 0; shu < k; shu++) {
+                    if (grid[shu][j] == 1 && shu != i) {
+                        num++
+                    }
+                }
+                if (num >= 1) {
+                    count++;
+                }
             }
         }
     }
+
     return count
 }
 console.log(countServer(arr));
