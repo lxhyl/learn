@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>canvas处理视频</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <video id="video"  crossorigin="anonymous" src="https://zhangpengfan.xyz/files/black.mp4" controls width="500" height="400px"></video>
+      
+        <canvas id="canvas2"  width="500" height="400"></canvas>
+    </div>
+    <script>
+        const video = document.getElementById('video');
+        let width = video.width;
+        let height = video.height;
+     
+        let canvas1 = document.createElement('canvas').getContext('2d');
+        canvas1.width = width;
+        canvas1.height = height;
+        let canvas2 = document.getElementById('canvas2').getContext('2d');
+       
+        let timer = null;
+        video.addEventListener('play', () => {
+        //   clearInterval(timer);
+        //    timer = setInterval(()=>{
+                getImgDate();
+        //    },10)
+        })
+        function getImgDate(){
+            canvas1.drawImage(video, 0, 0, width, height);
+            let imgtemp = canvas1.getImageData(0,0,width*2,height*2);
+            // let imgLength = imgtemp.data.length / 4;
+            // for(let i =0;i<imgLength;i++){
+            //     let r = imgtemp.data[i*4+0];//红色
+            //     let g = imgtemp.data[i*4+1];//黄色
+            //     let b = imgtemp.data[i*4+2];//蓝色
+            // }
+            console.log(imgtemp.width,imgtemp.height);
+            canvas2.putImageData(imgtemp,0,0);
+        }
+    </script>
+</body>
+
+</html>
+<!-- crossorigin="anonymous" -->

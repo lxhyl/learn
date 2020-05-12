@@ -125,3 +125,13 @@ Zarray.prototype = {
 
 // var myArr = new Zarray()
 // console.log(myArr.lx([1,2,3,4,5]))
+
+var arr = [1,2,3];
+arr['a']='a1';
+// for(let item in arr){
+//   console.log(item);
+// }
+for(let item of arr){
+  console.log(item);
+}
+console.log(arr)

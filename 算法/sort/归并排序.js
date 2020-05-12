@@ -16,16 +16,13 @@ var arr = [3,1,2,4,5,8,6,5,3,1,4,2,5,71,12,1];
         console.log(`左:---${left}    右:---${right}`)
         var l = left && left.length,r = right && right.length;
         var i = 0,j = 0;
-        var result = [];
-       
+        var result = [];    
         while(i<l && j<r){
             if(left[i] < right[j])
                 result.push(left[i++])
             else 
-                result.push(right[j++])
-            
-        }
-        
+                result.push(right[j++]) 
+        }      
         while(i<l){
             result.push(left[i++])
         }

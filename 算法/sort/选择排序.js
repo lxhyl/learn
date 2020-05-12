@@ -1,3 +1,4 @@
+
 var arr = [1,3,2,4,5,8,6,5,3,1,4,2,5,71,12,1];
 function chooseSort(arr){
     for(let i =0;i<arr.length-1;i++){

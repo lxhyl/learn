@@ -15,8 +15,7 @@ module.exports = {
     //运行服务器，实时重载
     devServer: {
         contentBase: './dist',
-        hot: true,
-       
+        hot: true,     
     },
     //插件
     plugins: [
